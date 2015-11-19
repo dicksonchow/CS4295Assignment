@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_Push"
+        android:orderInCategory="100"
+        android:title="Push"/>
+    <item android:id="@+id/menu_video"
+        android:orderInCategory="100"
+        android:title="Show Video"/>
+    <item android:id="@+id/menu_location"
+        android:orderInCategory="100"
+        android:title="Show Location"/>
+</menu>
