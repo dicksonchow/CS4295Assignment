@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menu_location:
                 Intent mapInt = new Intent(this, MapsActivity.class);
-                mapInt.putExtra("latitude", 22.3371078);
-                mapInt.putExtra("longitude", 114.170141);
+                mapInt.putExtra("latitude", 22.199436);
+                mapInt.putExtra("longitude", 113.5419536);
                 startActivity(mapInt);
                 break;
             default:

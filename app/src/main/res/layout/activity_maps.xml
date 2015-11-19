@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Estimated Time to take"
+        android:text="Estimated Time to arrive the Destination"
         android:id="@+id/textView3" />
 
     <EditText
