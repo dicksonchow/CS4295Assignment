@@ -23,9 +23,12 @@ import java.text.DecimalFormat;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    private static final float SPEED_OF_PLANE = 1020 * 1000;
+
     // Variables that refers to the items shown
     private SupportMapFragment mapFragment;
     private EditText disToDest;
+    private EditText timeTaken;
 
     // Variables that are used in the activities
     private double my_latitude;
@@ -47,6 +50,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         des_longitude = intent.getDoubleExtra("longitude", 0);
 
         disToDest = (EditText) findViewById(R.id.disToDest);
+        timeTaken = (EditText) findViewById(R.id.timeTaken);
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -69,7 +73,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 my_longitude = MyLocationListener.longitude;
                 Location.distanceBetween(my_latitude, my_longitude,
                         des_latitude, des_longitude, result);
-                disToDest.setText(String.format("%s meter", df.format(result[0])));
+                disToDest.setText(String.format("%.2f meter", df.format(result[0])));
+                timeTaken.setText(String.format("%.2f minutes", result[0] / SPEED_OF_PLANE * 3600));
 
                 showPolyLine = true;
                 mapFragment.getMapAsync(this);

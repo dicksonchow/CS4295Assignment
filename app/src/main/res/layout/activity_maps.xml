@@ -43,7 +43,7 @@
         android:text="Estimated Time to take"
         android:id="@+id/textView3" />
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/timeTaken"
