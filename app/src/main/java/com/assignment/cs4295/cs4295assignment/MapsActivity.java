@@ -73,8 +73,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 my_longitude = MyLocationListener.longitude;
                 Location.distanceBetween(my_latitude, my_longitude,
                         des_latitude, des_longitude, result);
-                disToDest.setText(String.format("%.2f meter", df.format(result[0])));
-                timeTaken.setText(String.format("%.2f minutes", result[0] / SPEED_OF_PLANE * 3600));
+                disToDest.setText(String.format("%s meter", df.format(result[0])));
+                timeTaken.setText(String.format("%.2f minutes", result[0] / SPEED_OF_PLANE * 60));
 
                 showPolyLine = true;
                 mapFragment.getMapAsync(this);
